@@ -17,9 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from secondproject import views
+from django.conf import settings
 
 urlpatterns = [
     path('admin-panal/', admin.site.urls),
-    path('',views.homePage),
+    path('',views.homePage,name="homePage"),
     path('saveenquary/',views.saveenquary,name="saveenquary")
 ]

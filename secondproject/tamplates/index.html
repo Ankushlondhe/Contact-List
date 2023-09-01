@@ -59,10 +59,13 @@
             <input type="text"name="lastname" class="form-control" placeholder="Last name" aria-label="Last name">
           </div>
           <div class="col">
-            <input type="number" name="phone" class="form-control" placeholder="Mobile number" aria-label="Last name">
+            <input type="number" name="phone" class="form-control" placeholder="Mobile number" aria-label="Phone">
           </div>
           <div class="col">
-            <input type="email" name="email" class="form-control" placeholder="Email" aria-label="Last name">
+            <input type="email" name="email" class="form-control" placeholder="Email" aria-label="Email">
+          </div>
+          <div class="col">
+            <input type="datetime-local" name="join_date" class="form-control" placeholder="Date" aria-label="Date">
           </div>
           <div class="submit_bt">
             <input type="submit" class="form-control" name="save" value="submit" >
@@ -70,20 +73,15 @@
         </div>
     </div>
 </form>
-      <div>
-        {% for a in contactData %}
-            <label>First Name</label>
-                <h3>{{a.f_name}}</h3> 
-            <label>Last Name</label>
-                <h3>{{a.l_name}}</h3>
-            <label>Contact Number</label>
-                <h3>{{a.contact_nu}}</h3>
-            <label>Email</label>
-                <h3>{{a.email}}</h3>
-        {% endfor %}
+<form action="{% url 'homePage' %}">
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-danger" type="submit" value="submit">Show Data</button>
+  </div>
 
+</form>
 
-      </div>
+</div>
+
            
      
       
